@@ -1,0 +1,463 @@
+/* General Reset and Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #ff5722, #ff8a65);
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Nav */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dashboard */
+.dashboard {
+  background: linear-gradient(135deg, #ffffff, #f1f8e9);
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  animation: zoomIn 1s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dashboard:hover {
+  transform: scale(1.05);
+}
+
+.dashboard h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #ff5722;
+  text-shadow: 3px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Buttons */
+button {
+  background: linear-gradient(135deg, #00acc1, #4dd0e1);
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #00838f, #4dd0e1);
+}
+
+/* Forms */
+form {
+  background: #ffffff;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1.2rem 0;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #00acc1;
+  box-shadow: 0 0 8px rgba(0, 172, 193, 0.5);
+}
+
+/* Tables */
+table {
+  background: white;
+  border-radius: 15px;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+table th,
+table td {
+  padding: 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background: #00acc1;
+  color: white;
+  text-transform: uppercase;
+}
+
+table tr:hover {
+  background: #f9f9f9;
+}
+
+.out-of-stock {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.low-stock {
+  background-color: #ffe082;
+  font-weight: bold;
+}
+
+
+/* Welcome Section */
+#welcome {
+  background: linear-gradient(135deg, #00acc1, #4dd0e1);
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  margin: 2rem auto;
+  max-width: 1100px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+#welcome h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+#welcome p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#welcome button {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#welcome button:hover {
+  background: #ff8a65;
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Dashboard Section */
+#dashboard {
+  background: #f1f8e9;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  margin: 3rem auto;
+  max-width: 1100px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+#dashboard h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: #ff5722;
+  text-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+#dashboard p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.cards-container a{
+  color: #ff5722;
+}
+
+.card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ff5722;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Key Stats Section */
+#stats {
+  background: #eeeeee;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  margin: 3rem auto;
+  max-width: 1100px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+#stats h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #ff5722;
+  font-weight: bold;
+  text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 25%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.stat h3 {
+  font-size: 2rem;
+  color: #ff5722;
+  margin-bottom: 1rem;
+}
+
+.stat p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Features Section */
+#features {
+  background: linear-gradient(135deg, #00acc1, #4dd0e1);
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 1100px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+#features h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+#features ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#features ul li {
+  font-size: 1.2rem;
+  margin: 1.2rem 0;
+  line-height: 1.5;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+#features ul li:before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #ff5722;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#features ul li:hover {
+  transform: translateX(10px);
+  transition: transform 0.3s ease;
+}
+
+/* Contact Section */
+footer {
+  background: #37474f;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+  margin: 3rem auto;
+  max-width: 1100px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+footer h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-container, .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .stat {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Bill</title>
+    <link rel="icon" href="./images/generate_bill.png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Generate Bill</h1>
+    </header>
+    <main>
+        <form id="generate-bill-form">
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+            
+            <label for="phone">Phone (optional):</label>
+            <input type="text" id="phone" name="phone">
+            
+            <label for="address">Address (optional):</label>
+            <textarea id="address" name="address"></textarea>
+
+            <div id="products-section">
+                <div class="product-row">
+                    <label>Product Name:</label>
+                    <input type="text" class="product-name" required>
+                    <label>Quantity:</label>
+                    <input type="number" class="product-quantity" required>
+                </div>
+            </div>
+            <button type="button" id="add-product">Add Another Product</button>
+            <button type="submit">Generate Bill</button>
+        </form>
+        <button onclick="window.location.href='index.html'">Back to Dashboard</button>
+    </main>
+    <script src="js/generateBill.js"></script>
+</body>
+</html>
